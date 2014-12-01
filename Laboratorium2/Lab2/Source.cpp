@@ -23,10 +23,8 @@ int main()
 	//SprawdzProstopadlosc(pr2, pr3);
 	// tu ma byæ informacja czy proste s¹ prostopad³e
 	p1 = p2.suma(p3);
-	// dodawanie dwoch punktów
 	p1.wypisz();
 	p2 = roznica(p1, p3);
-	// odejmowanie dwoch punktow
 	wypisz(p2);
 	wypisz(pr1);
 	// wypisanie informacji o punktach Np.: „Prosta y =ax+b przechodzi przez punkty...

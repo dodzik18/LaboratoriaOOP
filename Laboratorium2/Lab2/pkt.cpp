@@ -2,40 +2,37 @@
 
 pkt::pkt(const pkt &p3)
 {
-	this->x = p3.x;
-	this->y = p3.y;
+	x = p3.x;
+	y = p3.y;
 }
 
 void pkt::wypisz()
 {
-	std::cout << "Wspolrzedne punktu: " << "(" << this->x << "," << this->y << ")" << std::endl;
+	std::cout << "Wspolrzedne punktu: " << "(" << x << "," << y << ")" << std::endl;
 }
 
-pkt pkt::suma(const pkt &p3)
+pkt pkt::suma(const pkt &p3) //ok
 {
 	pkt temp;
-	temp.x += p3.x;
-	temp.y += p3.y; //b³¹d prawdopodobnie, ale coœ w ten deseñ
-	return temp;  //5,12
+	temp.x = x + p3.x;
+	temp.y = y + p3.y; 
+	return temp;  
 }
 
-pkt &pkt::operator=(const pkt &p2)
+pkt &pkt::operator=(const pkt &p2) //ok
 {
 	x = p2.x;
 	y = p2.y;
-	return *this;
+	return *this; //5, 12
 }
-
-void wypisz(const pkt &p2)
-{
-	std::cout << "(" << p2.x << "," << p2.y << ")" << std::endl;
-}
-
-pkt roznica(const pkt &p1, const pkt &p3)
+pkt roznica(const pkt &p1, const pkt &p3) //ok
 {
 	pkt temp;
 	temp.x = p1.x - p3.x;
 	temp.y = p1.y - p3.y;
 	return temp; //2, 5
 }
-
+void wypisz(const pkt &p2)
+{
+	std::cout << "(" << p2.x << "," << p2.y << ")" << std::endl;
+}
