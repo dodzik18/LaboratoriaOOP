@@ -1,26 +1,38 @@
 #include "prosta.h"
 
+
 prosta::prosta(pkt &p2, pkt &p3)
 {
-	x1 = p2.x; x2 = p2.y;
-	y1 = p3.x; y2 = p3.y;
+	float x1=0, x2=0, y1=0, y2=0;
+	p2.pobierz(x1, y1);
+	p3.pobierz(x2, y2);
+	_p1.ustaw(x1, y1);
+	_p2.ustaw(x2, y2);
+	a = (y2-y1);
+	b = (y2 * (-x1) + y1 * x1 - x2 * y1 + x1 * y1) / (x2 - x1);
 }
+
 prosta::prosta(const prosta &pr2)
 {
-	this->x1 = pr2.x1;
-	this->x2 = pr2.x2;
-	this->y1 = pr2.y1;
-	this->y2 = pr2.y2;
+	a = pr2.a;
+	b = pr2.b;
+	_p1 = pr2._p1;
+	_p2 = pr2._p2;
 }
 
 void prosta::wypisz()
 {
-	std::cout << "Prosta przechodzi przez punkty: (" << this->x1 << "," << this->x2 << "),(" << this->y1 << ","
-		<< this->y2 << ")" << std::endl;
+	// prosta przechodzi przez punkty (2,5) (3,7) i ma równanie y = 2x + 1
+	std::cout << "Prosta przechodzi przez punkty";
+	_p1._wypisz(); 	_p2._wypisz();
+	std::cout << "i ma rownanie y=";
+	std::cout << a << "x";
+	znak(b);
+	std::cout<< b << std::endl;
 }
 
-void wypisz(prosta &pr1)
+void prosta::SprawdzRownoleglosc(prosta &pr2)
 {
-	std::cout << "Prosta przechodzi przez punkty: (" << pr1.x1 << "," << pr1.x2 << "),(" << pr1.y1 << ","
-		<< pr1.y2 << ")" << std::endl;
+	if (a == pr2.a) std::cout << "Proste sa rownolegle." << std::endl;
+	else std::cout << "Proste nie sa rownolegle." << std::endl;
 }

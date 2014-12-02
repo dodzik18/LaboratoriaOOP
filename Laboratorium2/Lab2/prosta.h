@@ -1,20 +1,27 @@
 #pragma once
 #include "pkt.h"
+
 class prosta
 {
-private:
-	//pkt p1, p2;
-	//float a, b;
-	float x1, x2, y1, y2;
+
 public:
 
-	prosta(float xx = 0., float xz = 0., float yy = 0., float yz = 0.)
-		:x1(xx), x2(xz), y1(yy), y2(yz) {};
-	prosta(pkt &p2, pkt &p3);
-
-	prosta(const prosta &pr2);
+	prosta() : a(0.), b(0.), _p1(0.,0.), _p2(0.,0.) {};
+	prosta(pkt &p1, pkt &p2);
+	prosta(const prosta &p2);
+	
+	void SprawdzRownoleglosc(prosta &pr2);
 	void wypisz();
+	void znak(float n)
+	{ 
+		if (n >= 0) std::cout << "+";
+	}
 
-	friend void wypisz(prosta &pr1);
+	friend void wypisz(prosta pr1);
+	friend void SprawdzProstopadlosc(prosta pr2, prosta pr3);
 
+private:
+
+	pkt _p1, _p2;
+	float a, b;
 };
