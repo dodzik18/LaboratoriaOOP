@@ -27,7 +27,7 @@ void pkt::ustaw(float &_x, float &_y)
 	y = _y;
 }
 
-pkt pkt::suma(const pkt &p3) //ok
+pkt pkt::suma(const pkt &p3) 
 {
 	pkt temp;
 	temp.x = x + p3.x;
@@ -35,9 +35,9 @@ pkt pkt::suma(const pkt &p3) //ok
 	return temp;  
 }
 
-pkt &pkt::operator=(const pkt &p2) //ok
+pkt &pkt::operator=(const pkt &p2) 
 {
 	x = p2.x;
 	y = p2.y;
-	return *this; //5, 12
+	return *this; 
 }

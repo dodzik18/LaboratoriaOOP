@@ -22,7 +22,6 @@ prosta::prosta(const prosta &pr2)
 
 void prosta::wypisz()
 {
-	// prosta przechodzi przez punkty (2,5) (3,7) i ma równanie y = 2x + 1
 	std::cout << "Prosta przechodzi przez punkty";
 	_p1._wypisz(); 	_p2._wypisz();
 	std::cout << "i ma rownanie y=";
