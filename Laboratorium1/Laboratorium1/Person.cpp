@@ -1,12 +1,6 @@
 #include "Person.h"
-#include "Date.h"
-
 using namespace std;
 
-Person::Person(string n, string s)
-{
-	name = n;  surname = s;
-}
 
 void Person::set()
 {
@@ -19,8 +13,10 @@ void Person::log()
 {
 	cout << name << " " << surname << endl;
 }
-void Person::logon(Person &p1, Date &d1)
+void Person::logon(Date &d1)
 {
-	cout << p1.name << " " << p1.surname << " ";
-	d1.log();
+	int x, y, z;
+	d1.set(x, y, z);
+	cout << name << " " << surname << " ";
+
 }
