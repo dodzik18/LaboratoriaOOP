@@ -18,8 +18,3 @@ void prosta::wypisz()
 	std::cout << "Prosta przechodzi przez punkty: (" << x1 << "," << x2 << "),(" << y1 << ","<< y2 << ")" << std::endl;
 }
 
-void wypisz(prosta &pr1)
-{
-	std::cout << "Prosta przechodzi przez punkty: (" << pr1.x1 << "," << pr1.x2 << "),(" << pr1.y1 << "," << pr1.y2 << ")" << std::endl;
-}
-

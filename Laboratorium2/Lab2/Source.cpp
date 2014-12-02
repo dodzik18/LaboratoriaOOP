@@ -6,6 +6,26 @@ using namespace std;
 
 
 
+pkt roznica(const pkt &p1, const pkt &p3) //ok
+{
+	pkt temp;
+	temp.x = p1.x - p3.x;
+	temp.y = p1.y - p3.y;
+	return temp; //2, 5
+}
+
+void wypisz(const pkt &p2)
+{
+	std::cout << "(" << p2.x << "," << p2.y << ")" << std::endl;
+}
+
+void wypisz(prosta &pr1)
+{
+	std::cout << "Prosta przechodzi przez punkty: (" << pr1.x1 << "," << pr1.x2 << "),(" << pr1.y1 << "," << pr1.y2 << ")" << std::endl;
+}
+
+
+
 int main()
 {
 	pkt p1, p2(2, 5), p3(3, 7), p4(p3);

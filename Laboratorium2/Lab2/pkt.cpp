@@ -25,14 +25,3 @@ pkt &pkt::operator=(const pkt &p2) //ok
 	y = p2.y;
 	return *this; //5, 12
 }
-pkt roznica(const pkt &p1, const pkt &p3) //ok
-{
-	pkt temp;
-	temp.x = p1.x - p3.x;
-	temp.y = p1.y - p3.y;
-	return temp; //2, 5
-}
-void wypisz(const pkt &p2)
-{
-	std::cout << "(" << p2.x << "," << p2.y << ")" << std::endl;
-}
