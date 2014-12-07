@@ -8,7 +8,7 @@ public:
 
 	prosta() : a(0.), b(0.), _p1(0.,0.), _p2(0.,0.) {};
 	prosta(pkt &p1, pkt &p2);
-	prosta(const prosta &p2);
+	prosta(const prosta &pr2);
 	
 	void SprawdzRownoleglosc(prosta &pr2);
 	void wypisz();
