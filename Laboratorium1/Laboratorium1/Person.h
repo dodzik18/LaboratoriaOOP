@@ -1,22 +1,29 @@
 #pragma once
+#include "Date.h"
 #include <string>
 #include <iostream>
 
-class Date;
 
 class Person
 {
 public:
-	Person(std::string n, std::string s) : name(n), surname(s) {};
+	Person(std::string n = "Jan", std::string s = "Kowalski", int age_ = 0, int d_ = 1, int m_ = 1, int y_ = 1970)
+		: name(n), surname(s), age(age_), d1(d_, m_, y_) {};
 
 	void set();		//sets name and surname
-	void log();		//prints name and surname on screen
-	void logon(Date &d1);	//prints names, and birth date on screen
+	void show();		//prints name and surname on screen
 
-	friend void log_person(Person &p1); //global function, prints Person attributes
+	friend void show(Person&); //global function, prints Person attributes
+	
+
+	std::string getName() { return name; }
+	std::string getSurname() { return surname; }
+	int getAge() { return age; }
+
 
 private:
-	Date _d1();
+	Date d1;
+	int age;
 	std::string name, surname;
 
 };

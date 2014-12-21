@@ -9,14 +9,8 @@ void Person::set()
 	cout << " ";
 	cin >> surname;
 }
-void Person::log()
+void Person::show()
 {
 	cout << name << " " << surname << endl;
-}
-void Person::logon(Date &d1)
-{
-	int x, y, z;
-	d1.set(x, y, z);
-	cout << name << " " << surname << " ";
-
+	d1.show();
 }
