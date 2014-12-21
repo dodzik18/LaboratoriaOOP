@@ -78,6 +78,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AdministrationWorker.cpp" />
+    <ClCompile Include="ContactDetails.cpp" />
+    <ClCompile Include="Person.cpp" />
+    <ClCompile Include="ScientificWorker.cpp" />
+    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Student.cpp" />
+    <ClCompile Include="Worker.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AdministrationWorker.h" />
+    <ClInclude Include="ContactDetails.h" />
+    <ClInclude Include="Person.h" />
+    <ClInclude Include="ScientificWorker.h" />
+    <ClInclude Include="Student.h" />
+    <ClInclude Include="Worker.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
