@@ -3,6 +3,6 @@ class Person
 {
 public:
 	Person();
-	~Person();
+//	~Person();
 };
 
