@@ -6,6 +6,6 @@ AdministrationWorker::AdministrationWorker()
 }
 
 
-AdministrationWorker::~AdministrationWorker()
-{
-}
+//AdministrationWorker::~AdministrationWorker()
+//{
+//}

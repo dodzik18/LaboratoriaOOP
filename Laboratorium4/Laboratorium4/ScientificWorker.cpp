@@ -6,6 +6,6 @@ ScientificWorker::ScientificWorker()
 }
 
 
-ScientificWorker::~ScientificWorker()
-{
-}
+//ScientificWorker::~ScientificWorker()
+//{
+//}

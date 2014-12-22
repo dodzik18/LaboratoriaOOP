@@ -5,6 +5,6 @@ class AdministrationWorker :
 {
 public:
 	AdministrationWorker();
-	~AdministrationWorker();
+//	~AdministrationWorker();
 };
 

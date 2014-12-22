@@ -5,6 +5,6 @@ class ScientificWorker :
 {
 public:
 	ScientificWorker();
-	~ScientificWorker();
+//	~ScientificWorker();
 };
 
