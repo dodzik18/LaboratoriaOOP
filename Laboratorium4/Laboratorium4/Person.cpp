@@ -5,8 +5,7 @@ Person::Person(const Person& person)
 {
 	name = person.name;
 	surname = person.surname;
-	//copying constructor of ContactDetails
-	ContactDetails personContactDetails(person.personContactDetails); 
+	personContactDetails = person.personContactDetails;
 }
 
 

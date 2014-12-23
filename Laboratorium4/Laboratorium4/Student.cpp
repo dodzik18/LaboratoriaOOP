@@ -8,6 +8,13 @@ Student::Student(const Student & stud)
 	indexNumber = stud.indexNumber;
 }
 
+Student::Student(const Person& person, std::string universityName_, int indexNumber_)
+{
+	universityName = universityName_;
+	indexNumber = indexNumber_;
+	studentPersonalDetails = person;
+}
+
 void Student::show()
 {
 	studentPersonalDetails.show();
