@@ -13,7 +13,6 @@ public:
 	void show(void);
 	void showContactDetails(void);
 
-
 	Person(std::string name_ = "", std::string surname_ = "", int postalCode_ = 0, int idCardNumber_ = 0) 
 		: name(name_), surname(surname_), personContactDetails(postalCode_, idCardNumber_) {};
 	Person(const Person&);

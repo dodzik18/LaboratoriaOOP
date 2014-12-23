@@ -1,11 +1,11 @@
 #pragma once
 #include "Person.h"
 #include <iostream>
+#include <string>
 class Worker
 	: Person
 {
 public:
-
 	std::string getPosition() { return position; }
 	int getEarnings() { return earnings; }
 
