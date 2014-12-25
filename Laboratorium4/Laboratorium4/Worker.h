@@ -22,3 +22,10 @@ private:
 	Person workerPersonalData;
 };
 
+
+/*
+	BUGS and TODO list
+	
+1.	review of constructors code. Attention at workerPersonalData object, if it works well
+
+*/
