@@ -9,13 +9,13 @@ Worker::Worker(const Worker& worker)
 }
 
 Worker::Worker(const Person& person, std::string position_, int earnings_)
+	:workerPersonalData(person)
 {
 	position = position_;
 	earnings = earnings_;
-	workerPersonalData = person;
 }
 
-void Worker::show()
+void Worker::show(void)
 {
 	workerPersonalData.show();
 	std::cout << "Zajmowane stanowisko: " << position << std::endl;

@@ -20,6 +20,12 @@ int main()
 	Worker w1("", "", 0, 0, "Wykladowca", 3500), w2(p1, "Wozny", 2000);
 	AdministrationWorker a1, a2("Jan", "Kowalski", 34567, 21, "senator", 9500, true, Opel), a3(a2);
 
+	p1.show();
+	std::cout << "-------------------------------------" << std::endl;
+	w2.show();
+	std::cout << "-------------------------------------" << std::endl;
+
+
 	a1.show();
 	std::cout << "-------------------------------------" << std::endl;
 	a2.show(); 
