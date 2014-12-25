@@ -9,14 +9,14 @@ Person::Person(const Person& person)
 }
 
 
-void Person::show()
+void Person::show(void)
 {
 	std::cout << "Imie: " << name << std::endl;
 	std::cout << "Nazwisko: " << surname << std::endl;
 	personContactDetails.show();
 }
 
-void Person::showContactDetails()
+void Person::showContactDetails(void)
 {
 	personContactDetails.show();
 }
