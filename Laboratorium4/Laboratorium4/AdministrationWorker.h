@@ -30,8 +30,7 @@ private:
 	BUGS and TODO list:
 	
 
-1.	cout<<carBrand doesnt work as it should. We need fun(), that is using method getBrand() and returnning		string with brand name.
-2.	the whole thing with administrationWorkerDetails doesnt work, needs fix. 
-3.	in addition to 2nd problem, Person object in Worker class needsreview
+1.	cout<<carBrand doesnt work as I thought it'd be. We need function, that is using method getBrand() and returnning		string with brand name.
+2.	show() function doesnt work. Object got its values, but they arent displayed properly 
 
 */
