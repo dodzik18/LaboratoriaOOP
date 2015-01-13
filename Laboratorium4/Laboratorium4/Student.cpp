@@ -1,23 +1,16 @@
 #include "Student.h"
 
 
-Student::Student(const Student & stud)
-	:Person(stud.studentPersonalDetails) 
+Student::Student(const Student & student)
+	:Person(student)
 {
-	universityName = stud.universityName;
-	indexNumber = stud.indexNumber;
-}
-
-Student::Student(const Person& person, std::string universityName_, int indexNumber_)
-{
-	universityName = universityName_;
-	indexNumber = indexNumber_;
-	studentPersonalDetails = person;
+	universityName = student.universityName;
+	indexNumber = student.indexNumber;
 }
 
 void Student::show()
 {
-	studentPersonalDetails.show();
+	Person::show();
 	std::cout << "Studiuje na: " << universityName << std::endl;
 	std::cout << "Numer indeksu: " << indexNumber << std::endl;
 }
