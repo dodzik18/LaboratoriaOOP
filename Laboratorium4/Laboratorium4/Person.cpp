@@ -1,11 +1,11 @@
 #include "Person.h"
 
 
-Person::Person(const Person& person)
+Person::Person(const Person& person_)
 {
-	name = person.name;
-	surname = person.surname;
-	personContactDetails = person.personContactDetails;
+	name = person_.name;
+	surname = person_.surname;
+	personContactDetails = person_.personContactDetails;
 }
 
 

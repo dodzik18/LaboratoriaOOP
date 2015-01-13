@@ -4,8 +4,8 @@ class ContactDetails
 {
 public:
 
-	int getPostalCode() { return postalCode; };
-	int getidCardNumber() { return idCardNumber; };
+	int getPostalCode(void) { return postalCode; };
+	int getidCardNumber(void) { return idCardNumber; };
 
 	void show(void);
 

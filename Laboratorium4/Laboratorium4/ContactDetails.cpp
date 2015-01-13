@@ -6,7 +6,7 @@ ContactDetails::ContactDetails(const ContactDetails& Details)
 	idCardNumber = Details.idCardNumber;
 }
 
-void ContactDetails::show()
+void ContactDetails::show(void)
 {
 	std::cout << "Kod pocztowy: " << postalCode << std::endl;
 	std::cout << "Numer dowodu: " << idCardNumber << std::endl;

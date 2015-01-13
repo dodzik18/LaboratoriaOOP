@@ -1,11 +1,11 @@
 #include "Worker.h"
 
 
-Worker::Worker(const Worker& worker)
-	:Person(worker)
+Worker::Worker(const Worker& worker_)
+	:Person(worker_)
 {
-	position = worker.position;
-	earnings = worker.earnings;
+	position = worker_.position;
+	earnings = worker_.earnings;
 }
 
 void Worker::show(void)

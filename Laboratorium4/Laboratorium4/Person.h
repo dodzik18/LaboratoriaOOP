@@ -7,8 +7,8 @@ class Person
 {
 public:
 
-	std::string getName() { return name; }
-	std::string getSurName() { return surname; }
+	std::string getName(void) { return name; }
+	std::string getSurName(void) { return surname; }
 
 	void show(void);
 	void showContactDetails(void);
