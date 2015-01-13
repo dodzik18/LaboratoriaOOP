@@ -1,30 +1,34 @@
 #include "AdministrationWorker.h"
 
-AdministrationWorker::AdministrationWorker(const AdministrationWorker& tempAdminWorker)
-	:Worker(tempAdminWorker.administrationWorkerDetails)
+AdministrationWorker::AdministrationWorker(const AdministrationWorker& administrationWorker_)
+	:Worker(administrationWorker_)
 {
-	isEmployedAtGovernment = tempAdminWorker.isEmployedAtGovernment;
-	brand = tempAdminWorker.brand;
+	isEmployedAtGovernment = administrationWorker_.isEmployedAtGovernment;
+	brand = administrationWorker_.brand;
 }
 
-AdministrationWorker::AdministrationWorker(const Worker& workerDetails, bool isEmployedAtGovernment_, carBrand carBrand_)
-	:Worker(workerDetails)
-{
-	isEmployedAtGovernment = isEmployedAtGovernment_;
-	brand = carBrand_;
-}
 
 void AdministrationWorker::show(void)
 {
-	std::string employmentState; //this string is set according to isEmployedAtGorernment state
 
-	administrationWorkerDetails.show();
+	Worker::show();
 
-	if (isEmployedAtGovernment == true)
-		employmentState = "Pracuje dla rzadu.\n";
-	else employmentState = "Nie pracuje dla rzadu.\n";
+	std::cout << translateEmploymentStatusToString();
+	std::cout << "Marka sluzbowego samochodu: " << translateCarBrandToString(brand) << std::endl;
 
-	std::cout << employmentState;
-	std::cout << "Marka sluzbowego samochodu: " << brand << std::endl;
+}
 
+inline std::string AdministrationWorker::translateCarBrandToString(carBrand brand)
+{
+	{
+		switch (brand)
+		{
+		case Skoda: return "Skoda";
+		case Opel: return "Opel";
+		case Honda: return "Honda";
+		case Hyundai: return "Hyundai";
+		case BMW: return "BMW";
+		default: return "Brak samochodu sluzbowego";
+		}
+	}
 }
