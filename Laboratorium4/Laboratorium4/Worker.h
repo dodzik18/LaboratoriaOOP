@@ -13,18 +13,18 @@ public:
 
 	Worker(std::string name_ = "", std::string surname_ = "", int postalCode_ = 0, int idCardNumber_ = 0, std::string position_ = "", int earnings_ = 0)
 		: Person(name_, surname_, postalCode_, idCardNumber_), position(position_), earnings(earnings_) {};
-	Worker(const Worker&);
-	Worker(const Person&, std::string = "", int = 0);
+	Worker(const Worker& worker_);
+	Worker(const Person& person_, std::string position_ = "", int earnings_ = 0)
+		: Person(person_), position(position_), earnings(earnings_) {};
 
 private:
 	std::string position;
 	int earnings;
-	Person workerPersonalData;
 };
 
 
 /*
 	BUGS and TODO list
 	
-
+	NONE
 */
