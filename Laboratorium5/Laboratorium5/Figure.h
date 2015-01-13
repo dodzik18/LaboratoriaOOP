@@ -6,14 +6,15 @@ public:
 		: a(a_) {};
 
 
-	virtual double area() = 0; //returns area of the figure
-	virtual double circumference() = 0; 
-	virtual void show() = 0; //shows area and circumference of the figure
+	virtual double area(void) = 0; //returns area of the figure
+	virtual double circumference(void) = 0;
+	virtual void show(void) = 0; //shows area and circumference of the figure
 
 
-	int a; //variable, that is inherited, by all of figures, it can be one of quadrangle sides.
-		   //it's application will be commented in each class.
-	virtual int getA() {return a;}; //returns a
+	int a;  //variable, that is inherited, by all of figures, 
+			//it can be for example one of quadrangle sides.
+			//it's usage will be commented in each class.
 
+	virtual int getA(void) { return a; };
 };
 

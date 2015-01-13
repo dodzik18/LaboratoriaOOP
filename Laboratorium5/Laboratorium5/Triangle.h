@@ -8,15 +8,16 @@ public:
 	Triangle(int a_ = 0, int h_ = 0)
 		: Figure(a_), h(h_) {};
 
-	double area();
-	double circumference();
-	void show();
+	double area(void);
+	double circumference(void);
+	void show(void);
 
-	int getA() { return a; }; 
+
+	int getA(void) { return a; }; //gives us both sides 
 
 private:
 
-	int h;//gives us one of sides
+	int h; //height
 
 };
 

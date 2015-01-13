@@ -8,15 +8,15 @@ public:
 	Quadrangle(int a_ = 0, int b_ = 0)
 		: Figure(a_), b(b_) {};
 
-	double area();
-	double circumference();
-	void show();
+	double area(void);
+	double circumference(void);
+	void show(void);
 
 
-	int getA() { return a; };
+	int getA(void) { return a; }; //gives us one of two sides
 
 private:
 
-	int b; //we are inheriting second side, by getA() func. 
+	int b; 
 };
 
