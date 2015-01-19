@@ -1,5 +1,4 @@
 #pragma once
-#include <iostream>
 class point
 {
 public:
@@ -11,6 +10,10 @@ public:
 	float getX() { return coords[0]; }
 	float getY() { return coords[1]; }
 
+	point operator=(const point&);
+	point operator+(const point&);
+	point operator-(const point&);
+		
 private:
 	float coords[2];
 };

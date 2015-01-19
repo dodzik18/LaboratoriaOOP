@@ -60,9 +60,9 @@ int main()
 	else{
 		cout << "Proste NIE s¹ prostopadle\n";
 	}
-//	p1 = p2 + p3; // dodawanie dwoch punktów
+	p1 = p2 + p3; // dodawanie dwoch punktów
 	cout << p1;
-//	p2 = p1 - p3; // odejmowanie dwoch punktow
+	p2 = p1 - p3; // odejmowanie dwoch punktow
 	cout << p2;
 	cout << pr1;  
 	return 0;
