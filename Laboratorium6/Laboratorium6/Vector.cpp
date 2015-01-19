@@ -34,6 +34,19 @@ Vector::Vector(const Vector& vector_)
 	name = vector_.name;
 }
 
+Vector& Vector::operator=(const Vector& vector_)
+{
+	p1 = vector_.p1;
+	p2 = vector_.p2;
+	d1 = vector_.d1;
+	d2 = vector_.d2;
+	d3 = vector_.d3;
+	name = vector_.name;
+	return *this;
+}
+
+
+
 void Vector::show()
 {
 	std::cout << "Wektor " << name << " " << p2 << " " << d1 << "," << d2 << "," << d3 << "," << std::endl;

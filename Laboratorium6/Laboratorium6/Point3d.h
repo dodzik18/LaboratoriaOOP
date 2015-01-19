@@ -4,7 +4,7 @@ class Point3d :
 	private Point2d
 {
 public:
-	Point3d(double x_ = 0, double y_ = 0., double z_ = 0.);
+	explicit Point3d(double x_ = 0, double y_ = 0., double z_ = 0.);
 	Point3d(const Point3d&);
 	~Point3d(); 
 
@@ -12,6 +12,8 @@ public:
 	void show(int); 
 
 	void set(double x_, double y_, double z_);
+
+	Point3d& operator=(const Point3d&);
 
 	double getX() { return xy[0]; }
 	double getY() { return xy[1]; }

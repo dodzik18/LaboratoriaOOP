@@ -12,6 +12,8 @@ public:
 
 	void set(double x_, double y_);
 
+	Point2d& operator=(const Point2d&);
+
 	double getX() { return xy[0]; }
 	double getY() { return xy[1]; }
 

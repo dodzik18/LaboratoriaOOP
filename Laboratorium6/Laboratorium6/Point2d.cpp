@@ -18,6 +18,14 @@ Point2d::~Point2d()
 	delete[] xy;
 }
 
+Point2d& Point2d::operator=(const Point2d& point_)
+{
+	xy = new double[2];
+	xy[0] = point_.xy[0];
+	xy[1] = point_.xy[1];
+	return *this;
+}
+
 void Point2d::show()
 {
 	std::cout << "(" << xy[0] << "," << xy[1] << ")" << std::endl;

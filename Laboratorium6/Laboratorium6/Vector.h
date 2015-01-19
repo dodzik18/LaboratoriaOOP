@@ -10,6 +10,8 @@ public:
 	void show();
 	void show(int);
 
+	Vector& operator=(const Vector&);
+
 
 	double getD1(){ return d1; } 
 	double getD2(){ return d2; }
