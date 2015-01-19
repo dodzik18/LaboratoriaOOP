@@ -7,7 +7,7 @@
 using namespace std;
 
 
-int main()
+int main() 
 {
 	Point2d p1, p2(1, 1), p3(p2);
 	Point3d p31, p32(1, 3, 4), p33(1, 3), p34(p32);
@@ -15,12 +15,14 @@ int main()
 	p32.show(1); // {1;1}
 	p33.show(2); // [1;1]
 	p34.show();
-/*	
-	Vector w1,w2(2, 5), w3(p1, p2), w4(w3);
+	Vector w1;
+	Vector w2(2, 5);
+	Vector w3(p31, p32);
+	Vector w4(w3);
 	w1.show(); // (0;0)[d1,d2]
 	w2.show(1); // (1;1)(2;5)
 	w3.show();
-	w4.show(); */
+	w4.show(); 
 	p31.set(3, 4, 0);
 	p32.set(6, 7, 16);
 	cout << p31;
