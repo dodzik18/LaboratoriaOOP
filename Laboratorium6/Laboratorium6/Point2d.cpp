@@ -33,6 +33,11 @@ void Point2d::swap(Point2d& point_) throw()
 
 void Point2d::show()
 {
+	if (!xy)
+	{
+		std::cout << "(0,0)";
+		return;
+	};
 	std::cout << "(" << xy[0] << "," << xy[1] << ")" ;
 }
 

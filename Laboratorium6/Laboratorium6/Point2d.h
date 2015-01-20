@@ -3,7 +3,8 @@
 class Point2d
 {
 public:
-	explicit Point2d(double x_=0., double y_=0.);
+	Point2d() {};
+	explicit Point2d(double x_, double y_);
 	Point2d(const Point2d&);
 	virtual ~Point2d();
 
