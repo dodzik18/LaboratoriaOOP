@@ -19,6 +19,7 @@ public:
 	double getY() { return xy[1]; }
 	double getZ() { return xy[2]; }
 
+	void swap(Point3d&);
 
 	//coordinates are inherited from base class
 };

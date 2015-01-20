@@ -24,16 +24,26 @@ Point3d::~Point3d()
 
 Point3d& Point3d::operator=(const Point3d& point_)
 {
-	xy = new double[3];
+//	xy = new double[3];
+	Point3d temp;
+	
 	xy[0] = point_.xy[0];
 	xy[1] = point_.xy[1];
 	xy[2] = point_.xy[2];
+
 	return *this;
+}
+
+void Point3d::swap(Point3d& point_) throw()
+{
+	std::swap(xy[0], point_.xy[0]);
+	std::swap(xy[1], point_.xy[1]);
+	std::swap(xy[2], point_.xy[2]);
 }
 
 void Point3d::show()
 {
-	std::cout << "(" << xy[0] << "," << xy[1] << "," << xy[2] << ")" << std::endl;
+	std::cout << "(" << xy[0] << "," << xy[1] << "," << xy[2] << ")" ;
 }
 
 void Point3d::show(int choice)
@@ -41,10 +51,10 @@ void Point3d::show(int choice)
 	switch (choice)
 	{
 	case 1:
-		std::cout << "{" << xy[0] << "," << xy[1] << "," << xy[2] << "}" << std::endl;
+		std::cout << "{" << xy[0] << "," << xy[1] << "," << xy[2] << "}" ;
 		break;
 	case 2:
-		std::cout << "[" << xy[0] << "," << xy[1] << "," << xy[2] << "]" << std::endl;
+		std::cout << "[" << xy[0] << "," << xy[1] << "," << xy[2] << "]" ;
 		break;
 	default:
 		show();

@@ -20,15 +20,21 @@ Point2d::~Point2d()
 
 Point2d& Point2d::operator=(const Point2d& point_)
 {
-	xy = new double[2];
+//	xy = new double[2];
 	xy[0] = point_.xy[0];
 	xy[1] = point_.xy[1];
 	return *this;
 }
 
+void Point2d::swap(Point2d& point_) throw()
+{
+	std::swap(xy[0], point_.xy[0]);
+	std::swap(xy[1], point_.xy[1]);
+}
+
 void Point2d::show()
 {
-	std::cout << "(" << xy[0] << "," << xy[1] << ")" << std::endl;
+	std::cout << "(" << xy[0] << "," << xy[1] << ")" ;
 }
 
 void Point2d::show(int choice)
@@ -36,10 +42,10 @@ void Point2d::show(int choice)
 	switch (choice)
 	{
 		case 1:
-			std::cout << "{" << xy[0] << "," << xy[1] << "}" << std::endl;
+			std::cout << "{" << xy[0] << "," << xy[1] << "}" ;
 			break;
 		case 2:
-			std::cout << "[" << xy[0] << "," << xy[1] << "]" << std::endl;
+			std::cout << "[" << xy[0] << "," << xy[1] << "]" ;
 			break;
 		default:
 			show();
