@@ -8,19 +8,24 @@ public:
 	Point3d(const Point3d&);
 	~Point3d(); 
 
-	void show();
-	void show(int); 
+	void swap(Point3d&);
+
+	void show() override;
+	void show(int) override; 
 
 	void set(double x_, double y_, double z_);
 
 	Point3d& operator=(const Point3d&);
 
-	double getX() { return xy[0]; }
-	double getY() { return xy[1]; }
-	double getZ() { return xy[2]; }
 
-	void swap(Point3d&);
+	// x and y coordinates are inherited from base class
 
-	//coordinates are inherited from base class
+	double getX() override
+	{ return xy[0]; }	
+	double getY() override
+	{ return xy[1]; }
+	double getZ()  { return xy[2]; }
+
+
 };
 

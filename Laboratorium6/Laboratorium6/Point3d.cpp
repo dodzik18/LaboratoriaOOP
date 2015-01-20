@@ -23,10 +23,7 @@ Point3d::~Point3d()
 }
 
 Point3d& Point3d::operator=(const Point3d& point_)
-{
-//	xy = new double[3];
-	Point3d temp;
-	
+{	
 	xy[0] = point_.xy[0];
 	xy[1] = point_.xy[1];
 	xy[2] = point_.xy[2];

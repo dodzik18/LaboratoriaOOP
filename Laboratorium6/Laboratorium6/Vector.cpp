@@ -77,9 +77,9 @@ Vector& Vector::operator*(double multiplier)
 	return temp;
 }
 
-float Vector::operator!()
+double Vector::operator!()
 {
-	return sqrt(p1.getX()*p1.getX() + p1.getY()*p1.getY() + p1.getZ()*p1.getZ());;
+	return  sqrt(p1.getX()*p1.getX() + p1.getY()*p1.getY() + p1.getZ()*p1.getZ());
 }
 
 float Vector::operator%(Vector& vector_) 

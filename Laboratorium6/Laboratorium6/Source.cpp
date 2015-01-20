@@ -25,7 +25,7 @@ int main()
 	cout << endl;
 	p34.show();
 	cout << endl;
-	Vector w1, w2(2, 5), w3(p33, p32, "w3"), w4(w3);
+	Vector w1, w2(2, 5, 3), w3(p33, p32, "w3"), w4(w3);
 	w1.show(); // (0;0)[d1,d2]
 	w2.show(1); // (1;1)(2;5)
 	w3.show();
@@ -34,7 +34,7 @@ int main()
 	p32.set(6, 7, 16);
 	cout << p31 << endl;
 	cout << p32 << endl;
-	float a = !w2; // norma wektora
+	double a = !w2; // norma wektora
 	float b = w2%w3; // iloczyn skalarny dwoch wektorow
 	cout << a << " " << b << endl;
 	w1 = w2 + w3; // dodawanie dwoch wektorow
