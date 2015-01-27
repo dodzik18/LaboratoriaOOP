@@ -2,7 +2,7 @@
 
 class Point2d
 {
-public:
+public:	
 	Point2d() {};
 	explicit Point2d(double x_, double y_);
 	Point2d(const Point2d&);

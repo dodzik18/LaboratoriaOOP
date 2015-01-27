@@ -6,6 +6,14 @@
 
 using namespace std;
 
+Vector operator*(float multiplier, Vector& vector_)
+{
+	Vector temp;
+	temp.setD1(vector_.getD1()*multiplier);
+	temp.setD2(vector_.getD2()*multiplier);
+	temp.setD3(vector_.getD3()*multiplier);
+	return temp;
+}
 
 int main() 
 {
@@ -39,9 +47,9 @@ int main()
 	cout << a << " " << b << endl;
 	w1 = w2 + w3; // dodawanie dwoch wektorow
 	w1.show();
-//	w2 = 2 * w3; // mno¿enie liczby 2 przez wektor
-	cout << w2; // (x;y)<d1,d2>
+	w2 = 2 * w3; // mno¿enie liczby 2 przez wektor
+	cout << w2<<endl; // (x;y)<d1,d2>
 	w3 = w2 * 2; // mno¿enie wektora przez liczbe 2
-	cout << w3; 
+	cout << w3<<endl; 
 	return 0;
 }

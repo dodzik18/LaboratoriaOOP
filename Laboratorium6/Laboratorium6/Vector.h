@@ -20,12 +20,17 @@ public:
 	double operator!();
 	float operator%(Vector&);
 
+	double setD1() {}
 
-	double getD1(){ return d1; }
-	double getD2(){ return d2; }
-	double getD3(){ return d3; }
-	Point3d getP1() { return p1; }
-	Point3d getP2() { return p2; }
+	double getD1() const { return d1; }
+	double getD2() const { return d2; }
+	double getD3() const { return d3; }
+	Point3d getP1() const { return p1; }
+	Point3d getP2() const { return p2; }
+
+	void setD1(const double value) { d1 = value; }
+	void setD2(const double value) { d2 = value; }
+	void setD3(const double value) { d3 = value; }
 
 
 private:
