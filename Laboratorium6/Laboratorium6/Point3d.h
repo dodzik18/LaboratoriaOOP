@@ -20,11 +20,12 @@ public:
 
 	// x and y coordinates are inherited from base class
 
-	double getX() override
+	double getX() const override
 	{ return xy[0]; }	
-	double getY() override
+	double getY() const override
 	{ return xy[1]; }
-	double getZ()  { return xy[2]; }
+	double getZ() const 
+	{ return xy[2]; }
 
 
 };

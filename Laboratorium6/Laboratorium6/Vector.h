@@ -27,6 +27,9 @@ public:
 	double getD3() const { return d3; }
 	Point3d getP1() const { return p1; }
 	Point3d getP2() const { return p2; }
+	double getP1_X()  { return p1.getX(); }
+	double getP1_Y()  { return p1.getY(); }
+	double getP1_Z()  { return p1.getZ(); }
 
 	void setD1(const double value) { d1 = value; }
 	void setD2(const double value) { d2 = value; }

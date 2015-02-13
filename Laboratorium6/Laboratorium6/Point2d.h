@@ -15,8 +15,8 @@ public:
 
 	Point2d& operator=(const Point2d&);
 
-	virtual double getX() { return xy[0]; }
-	virtual double getY() { return xy[1]; }
+	virtual double getX() const { return xy[0]; }
+	virtual double getY() const { return xy[1]; }
 
 	void swap(Point2d&);
 
