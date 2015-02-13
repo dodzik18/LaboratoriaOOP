@@ -82,7 +82,7 @@ Vector& Vector::operator*(double multiplier)
 
 float Vector::operator%(Vector& vector_) 
 {
-	return p1.getX() * vector_.getP1().getX() + p1.getY()* vector_.getP1().getY() + p1.getZ() * vector_.getP1().getZ();
+	return p2.getX() * vector_.getP2_X() + p2.getY()* vector_.getP2_Y() + p2.getZ() * vector_.getP2_Z();
 }
 
 void Vector::show()
