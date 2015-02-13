@@ -17,7 +17,7 @@ public:
 	Vector& operator+(const Vector&);
 	Vector& operator-(const Vector&);
 	Vector& operator*(double);
-	double operator!();
+	/*float operator!(const Vector&);*/
 	float operator%(Vector&);
 
 	double setD1() {}
