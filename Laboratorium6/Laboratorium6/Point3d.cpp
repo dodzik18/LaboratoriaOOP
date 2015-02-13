@@ -31,7 +31,7 @@ Point3d& Point3d::operator=(const Point3d& point_)
 	return *this;
 }
 
-void Point3d::swap(Point3d& point_) throw()
+void Point3d::swap(Point3d& point_)
 {
 	std::swap(xy[0], point_.xy[0]);
 	std::swap(xy[1], point_.xy[1]);
@@ -40,11 +40,21 @@ void Point3d::swap(Point3d& point_) throw()
 
 void Point3d::show()
 {
+	if (!xy)
+	{
+		std::cout << "(0, 0, 0)" << std::endl;
+		return;
+	}
 	std::cout << "(" << xy[0] << "," << xy[1] << "," << xy[2] << ")" ;
 }
 
 void Point3d::show(int choice)
 {
+	if (!xy)
+	{
+		std::cout << "{0,0,0}" << std::endl;
+		return;
+	}
 	switch (choice)
 	{
 	case 1:

@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+
 class Vector
 {
 public:
@@ -7,7 +8,7 @@ public:
 	Vector(Point3d&, Point3d&, std::string = "vv");
 	Vector(const Vector&);
 
-	void swap(Vector&);
+	void swap(Vector&) throw(); /* waiting for VS2015, to support noexcept()*/
 
 	void show();
 	void show(int);
@@ -17,10 +18,8 @@ public:
 	Vector& operator+(const Vector&);
 	Vector& operator-(const Vector&);
 	Vector& operator*(double);
-	/*float operator!(const Vector&);*/
 	float operator%(Vector&);
 
-	double setD1() {}
 
 	double getD1() const { return d1; }
 	double getD2() const { return d2; }

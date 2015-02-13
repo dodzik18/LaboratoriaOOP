@@ -25,7 +25,7 @@ Point2d& Point2d::operator=(const Point2d& point_)
 	return *this;
 }
 
-void Point2d::swap(Point2d& point_) throw()
+void Point2d::swap(Point2d& point_) 
 {
 	std::swap(xy[0], point_.xy[0]);
 	std::swap(xy[1], point_.xy[1]);

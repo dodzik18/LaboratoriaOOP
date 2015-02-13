@@ -4,7 +4,6 @@
 #include "Globals.h"
 
 
-
 std::ostream& operator << (std::ostream& out, Point2d& point_)
 {
 	out << "(" << point_.getX() << "," << point_.getY() << ")" ;

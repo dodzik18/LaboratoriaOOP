@@ -1,5 +1,7 @@
 #pragma once
 #include "Point2d.h"
+
+
 class Point3d :
 	private Point2d
 {
@@ -8,7 +10,7 @@ public:
 	Point3d(const Point3d&);
 	~Point3d(); 
 
-	void swap(Point3d&);
+	void swap(Point3d&) throw();
 
 	void show() override;
 	void show(int) override; 

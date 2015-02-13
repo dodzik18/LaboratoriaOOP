@@ -18,7 +18,7 @@ public:
 	virtual double getX() const { return xy[0]; }
 	virtual double getY() const { return xy[1]; }
 
-	void swap(Point2d&);
+	void swap(Point2d&) throw();
 
 protected:
 	double *xy;

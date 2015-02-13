@@ -36,7 +36,7 @@ Vector::Vector(const Vector& vector_)
 	name = vector_.name;
 }
 
-void Vector::swap(Vector& vector_) throw()
+void Vector::swap(Vector& vector_)
 {
 	std::swap(d1, vector_.d1);
 	std::swap(d2, vector_.d2);
