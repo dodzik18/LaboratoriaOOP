@@ -12,15 +12,15 @@ public:
 
 	void swap(Point3d&) throw();
 
+
 	void show() override;
 	void show(int) override; 
 
-	void set(double x_, double y_, double z_);
 
 	Point3d& operator=(const Point3d&);
+	Point3d& operator+=(const Point3d&);
+	friend Point3d& operator+(Point3d&, const Point3d&);
 
-
-	// x and y coordinates are inherited from base class
 
 	double getX() const override
 	{ return xy[0]; }	
@@ -28,6 +28,8 @@ public:
 	{ return xy[1]; }
 	double getZ() const 
 	{ return xy[2]; }
+
+	void set(double x_, double y_, double z_);
 
 
 };

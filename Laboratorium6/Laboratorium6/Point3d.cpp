@@ -31,6 +31,14 @@ Point3d& Point3d::operator=(const Point3d& point_)
 	return *this;
 }
 
+Point3d& Point3d::operator+=(const Point3d& point_) 
+{
+	xy[0] += point_.getX();
+	xy[1] += point_.getY();
+	xy[2] += point_.getZ();
+	return *this;
+}
+
 void Point3d::swap(Point3d& point_)
 {
 	std::swap(xy[0], point_.xy[0]);
