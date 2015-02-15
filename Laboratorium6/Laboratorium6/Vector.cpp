@@ -44,6 +44,7 @@ void Vector::swap(Vector& vector_)
 
 	std::swap(p1, vector_.p1);
 	std::swap(p2, vector_.p2);
+	std::swap(name, vector_.name);
 }
 
 Vector& Vector::operator=(const Vector& vector_)
@@ -53,14 +54,17 @@ Vector& Vector::operator=(const Vector& vector_)
 	return *this;
 }
 
-Vector& Vector::operator+(const Vector& vector_) 
+Vector& Vector::operator+=(const Vector& vector_)
 {
-	Vector temp;
-	temp.d1 = d1 + vector_.d1;
-	temp.d2 = d2 + vector_.d2;
-	temp.d3 = d3 + vector_.d3; 
-	return temp;
+	p1 += vector_.getP1();
+	p2 += vector_.getP2();
+	d1 += vector_.getD1();
+	d2 += vector_.getD2();
+	d3 += vector_.getD3();
+	name = vector_.name;
+	return *this;
 }
+
 Vector& Vector::operator-(const Vector& vector_)
 {
 	Vector temp;
@@ -73,12 +77,11 @@ Vector& Vector::operator-(const Vector& vector_)
 Vector& Vector::operator*(double multiplier)
 {
 	Vector temp;
-	temp.d1 = d1*multiplier;
-	temp.d2 = d2*multiplier;
-	temp.d3 = d3*multiplier;
+	Vector copyOfThis;
+	copyOfThis = *this;
+	temp = copyOfThis*multiplier;
 	return temp;
 }
-
 
 float Vector::operator%(Vector& vector_) 
 {
@@ -98,4 +101,9 @@ void Vector::show(int)
 void Vector::showPoint()
 {
 	p2.show();
+}
+
+void Vector::showDattributes()
+{
+	std::cout << "[ " << d1 << "," << d2 << "," << d3 << " ]" << std::endl;
 }

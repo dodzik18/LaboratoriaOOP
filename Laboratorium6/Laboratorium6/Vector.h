@@ -13,11 +13,13 @@ public:
 	void show();
 	void show(int);
 	void showPoint();
+	void showDattributes();
 
 	Vector& operator=(const Vector&);
-	Vector& operator+(const Vector&);
+	Vector& operator+=(const Vector&);
 	Vector& operator-(const Vector&);
 	Vector& operator*(double);
+	friend 	Vector& operator+(Vector&, const Vector&);
 	float operator%(Vector&);
 
 
