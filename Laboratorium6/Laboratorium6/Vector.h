@@ -20,7 +20,7 @@ public:
 	Vector& operator-(const Vector&);
 	Vector& operator*(double);
 	friend 	Vector& operator+(Vector&, const Vector&);
-	float operator%(Vector&);
+	double operator%(Vector&);
 
 
 	double getD1() const { return d1; }

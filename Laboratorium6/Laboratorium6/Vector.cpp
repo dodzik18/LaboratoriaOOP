@@ -67,11 +67,10 @@ Vector& Vector::operator+=(const Vector& vector_)
 
 Vector& Vector::operator-(const Vector& vector_)
 {
-	Vector temp;
-	temp.d1 = d1 - vector_.d1;
-	temp.d2 = d2 - vector_.d2;
-	temp.d3 = d3 - vector_.d3;
-	return temp;
+	setD1(d1 - vector_.d1);
+	setD2(d2 - vector_.d2);
+	setD3(d3 - vector_.d3);
+	return *this;
 }
 
 Vector& Vector::operator*(double multiplier)
@@ -82,7 +81,7 @@ Vector& Vector::operator*(double multiplier)
 	return *this;
 }
 
-float Vector::operator%(Vector& vector_) 
+double Vector::operator%(Vector& vector_) 
 {
 	return p2.getX() * vector_.getP2_X() + p2.getY()* vector_.getP2_Y() + p2.getZ() * vector_.getP2_Z();
 }

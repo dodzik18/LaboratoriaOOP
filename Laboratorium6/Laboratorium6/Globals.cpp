@@ -37,7 +37,7 @@ Vector& operator+(Vector& lVector, const Vector& rVector)
 	return lVector += rVector;
 }
 
-float operator!(const Vector& vector_)
+double operator!(const Vector& vector_)
 {
 	/* sqrt(x*x+y*y+z*z) */
 	return  sqrt(vector_.getP1_X()*vector_.getP1_X() + vector_.getP1_Y()*vector_.getP1_Y() + vector_.getP1_Z()*vector_.getP1_Z());
