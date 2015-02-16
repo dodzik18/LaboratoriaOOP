@@ -76,11 +76,10 @@ Vector& Vector::operator-(const Vector& vector_)
 
 Vector& Vector::operator*(double multiplier)
 {
-	Vector temp;
-	Vector copyOfThis;
-	copyOfThis = *this;
-	temp = copyOfThis*multiplier;
-	return temp;
+	setD1(d1*multiplier);
+	setD2(d2*multiplier);
+	setD3(d3*multiplier);
+	return *this;
 }
 
 float Vector::operator%(Vector& vector_) 
