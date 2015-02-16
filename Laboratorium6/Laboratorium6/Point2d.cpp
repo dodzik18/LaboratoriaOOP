@@ -44,7 +44,7 @@ void Point2d::show()
 	{
 		std::cout << "(0,0)";
 		return;
-	};
+	}
 	std::cout << "(" << xy[0] << "," << xy[1] << ")" ;
 }
 

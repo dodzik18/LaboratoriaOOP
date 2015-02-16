@@ -30,7 +30,5 @@ public:
 	{ return xy[2]; }
 
 	void set(double x_, double y_, double z_);
-
-
 };
 

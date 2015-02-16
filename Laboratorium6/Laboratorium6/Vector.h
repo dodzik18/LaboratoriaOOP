@@ -8,12 +8,15 @@ public:
 	Vector(Point3d&, Point3d&, std::string = "vv");
 	Vector(const Vector&);
 
+
 	void swap(Vector&) throw(); /* waiting for VS2015, to support noexcept()*/
+
 
 	void show();
 	void show(int);
 	void showPoint();
 	void showDattributes();
+
 
 	Vector& operator=(const Vector&);
 	Vector& operator+=(const Vector&);

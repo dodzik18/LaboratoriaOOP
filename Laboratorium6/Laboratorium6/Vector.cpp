@@ -2,7 +2,6 @@
 #include "Globals.h"
 #include "Vector.h"
 #include <iostream>
-#include <cmath>
 
 
 Vector::Vector(double x_, double y_, double z_, std::string name_)
