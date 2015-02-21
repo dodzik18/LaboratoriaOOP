@@ -1,0 +1,1 @@
+Code here has to be like one in Laboratorium3 branch, but with some additions. There must be class Point3d inheriting from Point2d, and coordinates in both classes must be pointers to array of double. I know, that it is bad behaviour but I had to do so. 
