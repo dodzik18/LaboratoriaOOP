@@ -6,3 +6,4 @@
 
 
 
+This repo is showing my work on Object Oriented Programming subject on my studies. Each branch contains pdf with tasks. You have to copy main() function from it, and write code to handle it. 
