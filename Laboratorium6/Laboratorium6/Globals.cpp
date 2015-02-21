@@ -36,6 +36,11 @@ Vector& operator+(Vector& lVector, const Vector& rVector)
 {
 	return lVector += rVector;
 }
+Vector& operator-(Vector& lVector, const Vector& rVector)
+{
+	return lVector -= rVector;
+}
+
 
 double operator!(const Vector& vector_)
 {

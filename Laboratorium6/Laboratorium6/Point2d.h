@@ -18,6 +18,7 @@ public:
 
 	Point2d& operator+=(const Point2d&);
 	Point2d& operator=(const Point2d&);
+	Point2d& operator-=(const Point2d&);
 	friend Point2d& operator+(const Point2d&, const Point2d&); 
 
 

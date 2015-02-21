@@ -64,6 +64,17 @@ Vector& Vector::operator+=(const Vector& vector_)
 	return *this;
 }
 
+Vector& Vector::operator-=(const Vector& vector_)
+{
+	p1 -= vector_.getP1();
+	p2 -= vector_.getP2();
+	d1 -= vector_.getD1();
+	d2 -= vector_.getD2();
+	d3 -= vector_.getD3();
+	name = vector_.name;
+	return *this;
+}
+
 Vector& Vector::operator-(const Vector& vector_)
 {
 	setD1(d1 - vector_.d1);

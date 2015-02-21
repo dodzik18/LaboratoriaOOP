@@ -32,6 +32,13 @@ Point2d& Point2d::operator=(const Point2d& point_)
 	return *this;
 }
 
+Point2d& Point2d::operator-=(const Point2d& point_)
+{
+	xy[0] -= point_.getX();
+	xy[1] -= point_.getY();
+	return *this;
+}
+
 void Point2d::swap(Point2d& point_) 
 {
 	std::swap(xy[0], point_.xy[0]);

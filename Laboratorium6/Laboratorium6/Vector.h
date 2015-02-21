@@ -20,9 +20,11 @@ public:
 
 	Vector& operator=(const Vector&);
 	Vector& operator+=(const Vector&);
+	Vector& operator-=(const Vector&);
 	Vector& operator-(const Vector&);
 	Vector& operator*(double);
-	friend 	Vector& operator+(Vector&, const Vector&);
+	friend Vector& operator+(Vector&, const Vector&);
+	friend Vector& operator-(Vector&, const Vector&);
 	double operator%(Vector&);
 
 

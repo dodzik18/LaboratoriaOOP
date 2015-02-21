@@ -19,6 +19,7 @@ public:
 
 	Point3d& operator=(const Point3d&);
 	Point3d& operator+=(const Point3d&);
+	Point3d& operator-=(const Point3d&);
 	friend Point3d& operator+(Point3d&, const Point3d&);
 
 
