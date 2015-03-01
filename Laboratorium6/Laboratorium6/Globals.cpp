@@ -4,21 +4,22 @@
 #include "Globals.h"
 
 
-std::ostream& operator << (std::ostream& out, Point2d& point_)
+std::ostream& operator << (std::ostream& out, const Point2d& point)
 {
-	out << "(" << point_.getX() << "," << point_.getY() << ")" ;
+	out << "(" << point.getX() << "," << point.getY() << ")" ;
 	return out;
 }
 
-std::ostream& operator<<(std::ostream& out, Point3d& point_)
+std::ostream& operator<<(std::ostream& out, const Point3d& point)
 {
-	out << "(" << point_.getX() << "," << point_.getY() << "," << point_.getZ() << ")" ;
+	out << "(" << point.getX() << "," << point.getY() << "," << point.getZ() << ")" ;
 	return out;
 }
 
-std::ostream& operator<<(std::ostream& out, Vector& vector_)
+std::ostream& operator<<(std::ostream& out, const Vector& vector)
 {
-	vector_.showDattributes();
+	Vector tempVector(vector);
+	tempVector.showDattributes();
 	return out;
 }
 /* http://en.cppreference.com/w/cpp/language/operators -> Binary arithmetic operators */
