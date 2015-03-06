@@ -2,9 +2,9 @@
 #include <iostream>
 class Vector;
 
-std::ostream& operator<<(std::ostream&, const Point2d& point);
-std::ostream& operator<<(std::ostream&, const Point3d& point);
-std::ostream& operator<<(std::ostream&, const Vector& point);
+std::ostream& operator<<(std::ostream& out, const Point2d point2D);
+std::ostream& operator<<(std::ostream& out, const Point3d point3D);
+std::ostream& operator<<(std::ostream& out, const Vector vector);
 
-double operator!(const Vector& vector);
-Vector operator*(float multiplier, Vector& vector );
+double operator!(const Vector vector);
+Vector operator*(float multiplier, const Vector vector);

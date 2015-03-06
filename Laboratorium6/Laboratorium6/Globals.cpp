@@ -4,52 +4,36 @@
 #include "Globals.h"
 
 
-std::ostream& operator << (std::ostream& out, const Point2d& point)
+std::ostream& operator <<(std::ostream& out, const Point2d point2D)
 {
-	out << "(" << point.getX() << "," << point.getY() << ")" ;
+	out << "(" << point2D.getX() << "," << point2D.getY() << ")" ;
 	return out;
 }
 
-std::ostream& operator<<(std::ostream& out, const Point3d& point)
+std::ostream& operator<<(std::ostream& out, const Point3d point3D)
 {
-	out << "(" << point.getX() << "," << point.getY() << "," << point.getZ() << ")" ;
+	out << "(" << point3D.getX() << "," << point3D.getY() << "," << point3D.getZ() << ")" ;
 	return out;
 }
 
-std::ostream& operator<<(std::ostream& out, const Vector& vector)
+std::ostream& operator<<(std::ostream& out, const Vector vector)
 {
 	Vector tempVector(vector);
-	tempVector.showDattributes();
+	tempVector.showAttributes();
 	return out;
 }
-/* http://en.cppreference.com/w/cpp/language/operators -> Binary arithmetic operators */
-Point2d& operator+(Point2d& lPoint, const Point2d& rPoint)
-{
-	return lPoint += rPoint;
-}
 
-Point3d& operator+(Point3d& lPoint, const Point3d& rPoint)
-{
-	return lPoint += rPoint;
-}
-
-Vector& operator+(Vector& lVector, const Vector& rVector)
-{
-	return lVector += rVector;
-}
-Vector& operator-(Vector& lVector, const Vector& rVector)
-{
-	return lVector -= rVector;
-}
-
-
-double operator!(const Vector& vector_)
+double operator!(const Vector vector)
 {
 	/* sqrt(x*x+y*y+z*z) */
-	return  sqrt(vector_.getP1_X()*vector_.getP1_X() + vector_.getP1_Y()*vector_.getP1_Y() + vector_.getP1_Z()*vector_.getP1_Z());
+	return sqrt(vector.getP1_X() * vector.getP1_X() + vector.getP1_Y() * vector.getP1_Y() + vector.getP1_Z() * vector.getP1_Z());
 }
 
-Vector operator*(float multiplier, Vector& vector_)
+Vector operator*(float multiplier, const Vector vector)
 {
-	return vector_*multiplier;
+	Vector temp(vector);
+	temp.setD1(vector.getD1() * multiplier);
+	temp.setD2(vector.getD2() * multiplier);
+	temp.setD3(vector.getD3() * multiplier);
+	return temp;
 }
